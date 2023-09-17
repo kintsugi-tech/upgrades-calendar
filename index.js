@@ -128,9 +128,12 @@ async function listEvents(auth) {
         }
         console.log('Event created: %s', JSON.stringify(event));
       });
+    } else {
+      console.log(`${upgrade.chain_name} ${upgrade.node_version} Upgrade already present in calendar.`)
     }
   })
 
+  console.log(`All Done`)
 }
 
 authorize().then(listEvents).catch(console.error);

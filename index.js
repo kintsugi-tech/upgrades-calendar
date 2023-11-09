@@ -89,7 +89,7 @@ async function listEvents(auth) {
   const doneIds = events.data.items.map((e) => e.id)
 
   // Query upgrades
-  let upgrades = await axios.get("https://polkachu.com/api/v1/chain_upgrades");
+  let upgrades = await axios.get("https://polkachu.com/api/v2/chain_upgrades");
 
   upgrades.data.forEach(async (upgrade) => {
 
